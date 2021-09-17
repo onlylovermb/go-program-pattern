@@ -1,5 +1,5 @@
 # functional options
-### example
+### Example
 ``` go
 // 假如我们需要初始化一个server结构体如下所示，结构体中有必需配置（有默认值&无默认值）和非必需配置，如何设置server 的初始化函数？
 type Server struct {
@@ -14,7 +14,7 @@ type Server struct {
 	TLS *tls.Config
 }
 ```
-### demo
+### Demo
 - Level 0：use demo with many NewServerXXX function
 ```go
 // simple but too ugly
@@ -52,7 +52,6 @@ serverB, _ := NewServer("127.0.0.1", 2001, &config)
 ```go
 // complex and not suit for go
 
-//使用一个builder类来做包装
 type ServerBuilder struct {
   Server
 }
@@ -60,7 +59,6 @@ type ServerBuilder struct {
 func (sb *ServerBuilder) Create(addr string, port int) *ServerBuilder {
   sb.Server.Addr = addr
   sb.Server.Port = port
-  //其它代码设置其它成员的默认值
   return sb
 }
 
@@ -97,7 +95,7 @@ server, err := sb.Create("127.0.0.1", 8080).
   Build()
 ```
 
-- Level 3：use demo with functional options
+- **Level 3：use demo with functional options**
 ```go
 // maybe the best way
 serverA, _ := NewServer("127.0.0.1", 2001)
