@@ -5,6 +5,6 @@ Golang 编程模式
 * [策略模式（strategy pattern）](https://github.com/onlylovermb/go-program-pattern/tree/main/strategy)
 
 
-
-- 参考链接：<https://time.geekbang.org/column/article/332603>
-- 参考链接：<https://refactoringguru.cn/design-patterns>
+参考：
+1. 参考链接：<https://time.geekbang.org/column/article/332603>
+2. 参考链接：<https://refactoringguru.cn/design-patterns>
